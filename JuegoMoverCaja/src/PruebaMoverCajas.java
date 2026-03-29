@@ -8,10 +8,13 @@
  * @author Gaby
  */
 public class PruebaMoverCajas {
-    public static void main(String args[]) {
-        JuegoMoverCajas juego1 = new JuegoMoverCajas(8, 8);
-        System.out.println(juego1);
-        juego1.setTrabajador(1, 2);
-        System.out.println(juego1);
+
+    public static void main(String[] args) {
+        JuegoMoverCajas juego = new JuegoMoverCajas();
+        juego.cargarJuego3();
+        juego.solucionJuego3();
+        System.out.println(juego);
+        
+        
     }
 }
