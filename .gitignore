@@ -25,7 +25,12 @@
 /Biblioteca/build/
 /Hilos/nbproject/private/
 /Hilos/build/
+<<<<<<< HEAD
 /Contacto/nbproject/private/
 /Contacto/build/
 /CajeroAutomatico/nbproject/private/
 /CajeroAutomatico/build/
+=======
+/PilasColasMultiples/nbproject/private/
+/PilasColasMultiples/build/
+>>>>>>> 887b33b0f3341d83a29d6ba3502e2f9ccf648a24
