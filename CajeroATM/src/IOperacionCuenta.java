@@ -3,14 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
+
 /**
  *
  * @author Gaby
  */
-public class PruebaContacto {
-
-    public static void main(String[] args) {
-
-        //System.out.println(lJengibre.unirLista(lChesky, lJengibre.unirLista(lJengibre, lChesky2)).filtroXEstado(3).toReporteTelefonos());
-    }
+public interface IOperacionCuenta {
+    public void depositar(int monto);
+    public boolean retirar(int monto);
+    public double consultarSaldo();
 }

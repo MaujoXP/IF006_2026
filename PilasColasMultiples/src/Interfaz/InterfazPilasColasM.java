@@ -1,3 +1,5 @@
+package Interfaz;
+
 
 import Cola.ColasM;
 import Pila.PilasM;
