@@ -1,100 +1,88 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.biblioteca.entidad;
 
-/**
- *
- * @author Gaby
- */
 public class Libro {
-
-    private int isbn;
+    
     private int idLibro;
+    private int isbn;
     private String nombre;
-    private short idAutor;
-    private byte idCategoria;
-    private byte idEditorial;
+    private Autor autor;
+    private Categoria categoria;
+    private Editorial editorial;
     private boolean activo;
-
-    public Libro(int isbn, int idLibro, String nombre, short idAutor, byte idCategoria, byte idEditorial, boolean activo) {
-        this.isbn = isbn;
-        this.idLibro = idLibro;
-        this.nombre = nombre;
-        this.idAutor = idAutor;
-        this.idCategoria = idCategoria;
-        this.idEditorial = idEditorial;
-        this.activo = activo;
-    }
 
     public Libro() {
     }
 
-    public int getIsbn() {
-        return isbn;
+    public Libro(int idLibro, int isbn, String nombre, Autor autor, Categoria categoria, Editorial editorial, boolean activo) {
+        this.idLibro = idLibro;
+        this.isbn = isbn;
+        this.nombre = nombre;
+        this.autor = autor;
+        this.categoria = categoria;
+        this.editorial = editorial;
+        this.activo = activo;
     }
 
     public int getIdLibro() {
         return idLibro;
     }
 
-    public String getNombre() {
-        return nombre;
+    public void setIdLibro(int idLibro) {
+        this.idLibro = idLibro;
     }
 
-    public short getIdAutor() {
-        return idAutor;
-    }
-
-    public byte getIdCategoria() {
-        return idCategoria;
-    }
-
-    public byte getIdEditorial() {
-        return idEditorial;
-    }
-
-    public boolean isActivo() {
-        return activo;
+    public int getIsbn() {
+        return isbn;
     }
 
     public void setIsbn(int isbn) {
         this.isbn = isbn;
     }
 
-    public void setIdLibro(int idLibro) {
-        this.idLibro = idLibro;
+    public String getNombre() {
+        return nombre;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public void setIdAutor(short idAutor) {
-        this.idAutor = idAutor;
+    public Autor getAutor() {
+        return autor;
     }
 
-    public void setIdCategoria(byte idCategoria) {
-        this.idCategoria = idCategoria;
+    public void setAutor(Autor autor) {
+        this.autor = autor;
     }
 
-    public void setIdEditorial(byte idEditorial) {
-        this.idEditorial = idEditorial;
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
+    public Editorial getEditorial() {
+        return editorial;
+    }
+
+    public void setEditorial(Editorial editorial) {
+        this.editorial = editorial;
+    }
+
+    public boolean isActivo() {
+        return activo;
     }
 
     public void setActivo(boolean activo) {
         this.activo = activo;
     }
 
-    public String toString() {
-        String salida = "ID: " + idLibro
-                + "\nNombre: " + nombre
-                + "\nISBN: " + isbn
-                + "\nidAutor: " + idAutor
-                + "\nidCategoria: " + idCategoria
-                + "\nidEditorial: " + idEditorial
-                + "\nActivo" + (activo ? "Si" : "No");
-        return salida;
-    }
+    
+    
+    
+    
+    
 }
