@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="estilos.css">
+	<title>Calculadora IVA</title>
+</head>
+<body>
+	<div class="card">
+		<h2>Calculadora de IVA</h2>
+
+		<form id="formIVA">
+			<label for="txtPrecio">Precio</label>
+			<input type="number" id="txtPrecio" placeholder="0" required>
+			<label for="txtIva">Iva (%)</label>
+			<input type="number" id="txtIva" value="13" required>
+			<button type="submit">Calcular</button>
+		</form>
+
+		<div class="resultado" id="resultado">
+			Aqui aparecerá el resultado
+		</div>
+	</div>
+	<script src="calcularIva.js"></script>
+</body>
+</html>

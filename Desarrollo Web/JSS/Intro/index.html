@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Intro a JS</title>
+</head>
+<body>
+	<h1>Introducción al Javascript</h1>
+	<script>
+		//console.log("Hola mundo");
+		//alert("Otra ve hola");
+		//var numero = 10;
+		//var numero2 = 28;
+
+		//var sumar = numero + numero2;
+
+		//console.log(numero + "+" + numero2 + "=" + sumar);
+
+		//var a = 1;
+		//console.log(a == '1'); //Compara por valor
+		//console.log(a === '1'); //Compara por tipo
+		//var lista = [8, 5, 10, 1, 6];
+		//console.log(lista[3]);
+		var personas = [
+			{
+				cedula: 703090047,
+				nombre: "Mauricio",
+				edad: 21
+			},
+			{
+				cedula: 703000018,
+				nombre: "Michelle",
+				edad: 23
+			},
+			{
+				cedula: 703090046,
+				nombre: "Maziel",
+				edad: 22
+			}
+			
+		];
+		//console.log(personas);
+		//console.log(personas[0]);
+
+		for(let persona of personas){
+			if(persona.edad > 21)
+				console.log(persona);
+		}
+	</script>
+</body>
+</html>

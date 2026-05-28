@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Intro a JS</title>
+</head>
+<body>
+	<h1>Funciones JavaScript</h1>
+	<script>
+		var personas = [
+			{
+				cedula: 703090047,
+				nombre: "Mauricio",
+				edad: 21
+			},
+			{
+				cedula: 703000018,
+				nombre: "Michelle",
+				edad: 23
+			},
+			{
+				cedula: 703090046,
+				nombre: "Maziel",
+				edad: 22
+			}
+			
+		];
+		function saludar() {
+			console.log("Hola");
+		}
+		saludar();
+		function saludar(nombre){
+			console.log(nombre);
+		}
+		saludar("Mauricio");
+		function sumar(a, b) {
+			return(a + b);
+		}
+		function multiplicar(a, b){
+			return(a*b);
+		}
+		var resultado = sumar(14, 19);
+		console.log(resultado);
+		function buscarPorPersona(nombre){
+			for(let persona of personas){
+				if(persona.nombre === nombre){
+					console.log(persona);
+					return;
+				}
+			}
+			console.log("Persona no encontrada");
+
+		}
+		buscarPorPersona("Mauricio");
+
+	</script>
+</body>
+</html>
