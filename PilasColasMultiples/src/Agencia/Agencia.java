@@ -2,7 +2,7 @@ package Agencia;
 
 public class Agencia {
 
-    private Tramite tramitesAgencia[];
+    private ListaTramites listaTramites;
 
     private String nombreAgencia;
 
@@ -13,7 +13,7 @@ public class Agencia {
 // contructores de agencia  
     public Agencia(int cantidadTramites) {
 
-        this.tramitesAgencia = new Tramite[cantidadTramites];
+        this.listaTramites = new ListaTramites(cantidadTramites);
 
         this.nombreAgencia = "Desconocida";
 
@@ -25,7 +25,7 @@ public class Agencia {
 
     public Agencia(int cantidadTramites, int nAge) {
 
-        this.tramitesAgencia = new Tramite[cantidadTramites];
+        this.listaTramites = new ListaTramites(cantidadTramites);
 
         this.nombreAgencia = "Desconocida";
 
@@ -37,7 +37,7 @@ public class Agencia {
 
     public Agencia(int cantidadTramites, int nAge, String nombreA) {
 
-        this.tramitesAgencia = new Tramite[cantidadTramites];
+        this.listaTramites = new ListaTramites(cantidadTramites);
 
         this.nombreAgencia = nombreA;
 
@@ -49,7 +49,7 @@ public class Agencia {
 
     public Agencia(Agencia nueva) {
 
-        this.tramitesAgencia = nueva.tramitesAgencia;
+        this.listaTramites = nueva.listaTramites;
 
         this.nombreAgencia = nueva.nombreAgencia;
 
@@ -61,7 +61,7 @@ public class Agencia {
 
     public void agregarTramiteAgencia(Tramite nuevo) {
 
-        this.tramitesAgencia[posProximoTramite++] = nuevo;
+        this.listaTramites.agregarTramite(nuevo);
 
     }
 
@@ -79,7 +79,7 @@ public class Agencia {
 
         for (int i = 0; i < this.posProximoTramite; i++) {
 
-            sal += this.tramitesAgencia[i].toString2();
+            sal += this.listaTramites.toString();
 
         }
 

@@ -15,6 +15,8 @@ public class Tramite {
     private int montoImpuestos;
 
     private int tipo;
+    
+    private int estado;
 
     private int vecTramite[];
 
@@ -35,6 +37,8 @@ public class Tramite {
         this.montoImpuestos = 2000;
 
         this.tipo = 1;
+        
+        this.estado = 0;
 
     }
 
@@ -53,7 +57,6 @@ public class Tramite {
         this.montoImpuestos = montoImpuestos;
 
         this.tipo = tipo;
-
     }
 
     public Tramite(Tramite nuevo) {
@@ -71,9 +74,52 @@ public class Tramite {
         this.montoImpuestos = nuevo.montoImpuestos;
 
         this.tipo = nuevo.tipo;
+        
+        this.estado = estado;
 
     }
 
+    public int getnSucursal() {
+        return nSucursal;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public int getnTramite() {
+        return nTramite;
+    }
+
+    public int getnCliente() {
+        return nCliente;
+    }
+
+    public int getMontoFactura() {
+        return montoFactura;
+    }
+
+    public int getMontoImpuestos() {
+        return montoImpuestos;
+    }
+
+    public int getTipo() {
+        return tipo;
+    }
+
+    public int getEstado() {
+        return estado;
+    }
+
+    public int[] getVecTramite() {
+        return vecTramite;
+    }
+
+    public int[] getVecCliente() {
+        return vecCliente;
+    }
+    
+    
     // Metodos set  
     public void setNSucursal(int nSuc) {
 
@@ -89,8 +135,17 @@ public class Tramite {
 
     @Override
     public String toString() {
-        return "Tramite{" + "nSucursal=" + nSucursal + ", fecha=" + fecha + ", nTramite=" + nTramite + ", nCliente=" + nCliente + ", montoFactura=" + montoFactura + ", montoImpuestos=" + montoImpuestos + ", tipo=" + tipo + ", vecTramite=" + vecTramite + ", vecCliente=" + vecCliente + '}';
+        return "Tramite{" +
+               "nSucursal=" + nSucursal +
+               ", fecha='" + fecha + '\'' +
+               ", nTramite=" + nTramite +
+               ", nCliente=" + nCliente +
+               ", montoFactura=" + montoFactura +
+               ", montoImpuestos=" + montoImpuestos +
+               ", tipo=" + tipo +
+               ", estado=" + estado;
     }
+
     
     public String toString2() {
         return "Tramite\n" + "nSucursal: " + nSucursal 

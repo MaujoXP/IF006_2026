@@ -7,10 +7,6 @@ package Arboles;
 import Contacto.ListaContactos;
 import static java.lang.Integer.parseInt;
 
-/**
- *
- * @author Gaby
- */
 public class PruebaContactoArbolesM {
     public static void main(String[] args) {
           ArbolesM bosque = new ArbolesM(60, 5); 

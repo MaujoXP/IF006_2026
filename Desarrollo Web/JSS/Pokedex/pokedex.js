@@ -11,9 +11,9 @@ boton.addEventListener("click", function(){
 		resultado.innerHTML = `
 			<h2>${data.name}</h2>
 			<img src="${data.sprites.front_default}">
+			<p>Peso: ${data.weight}</p>
 			<p>Tipo: ${data.types[0].type.name}</p>
 			<p>Altura: ${data.height}</p>
-			<p>Peso: ${data.weight}</p>
 		`;
 	})
 	.catch(function(){

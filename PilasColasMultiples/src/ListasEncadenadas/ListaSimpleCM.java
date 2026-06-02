@@ -182,4 +182,3 @@ public class ListaSimpleCM {
    }
    
 }
-//Primeros 8, extraer id, asignar a una lista multiple con encadenamiento de metodos, en una sola linea
