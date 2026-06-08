@@ -1,0 +1,19 @@
+{
+  "name": "gestion_inventario",
+  "version": "1.0.0",
+  "description": "Es un sistema de control de inventario",
+  "license": "ISC",
+  "author": "Mauricio León Bermúdez",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14"
+  },
+  "devDependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
