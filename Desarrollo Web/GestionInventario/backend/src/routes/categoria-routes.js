@@ -1,18 +1,11 @@
 const router = require('express').Router();
 
-const categorias = [
-	{id:1, nombre:'Verduras', descripcion: ''},
-	{id:2, nombre:'Frutas', descripcion: ''},
-	{id:3, nombre:'Enlatados', descripcion: ''},
-	{id:4, nombre:'Carnes', descripcion: 'Res, pollo, cerdo'}
-];
+const controlador = require('../controllers/categoria-controller');
 
-router.get('/', function(req, res) {
-	res.send('Estamos en categorias');
-});
-
-router.get('/listar', function(req, res) {
-	res.send(categorias);
-});
+router.get('/', controlador.listarCategorias);
+router.get('/:id', controlador.obtenerCategoriaPorId);
+router.post('/agregar', controlador.agregarCategoria);
+router.put('/editar', controlador.editarCategoria);
+router.delete('/eliminar/:id', controlador.eliminarCategoria);
 
 module.exports = router;
