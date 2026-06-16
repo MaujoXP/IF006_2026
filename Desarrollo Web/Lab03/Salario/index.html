@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculadora salario por dia</title>
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+	<div class="card">
+		<h2>Calculadora salario por dia</h2>
+		<form id="formCSD">
+			<label for="txtTrabajador">Nombre del trabajador</label>
+			<input type="text" id="txtTrabajador">
+
+			<label for="txtSalario">Pago por hora</label>
+			<input type="number" id="txtSalario" placeholder="0" required>
+
+			<label for="txtHoras">Horas laboradas</label>
+			<input type="number" id="txtHoras" placeholder="0" required>
+			<button type="submit">Calcular</button>
+		</form>
+	</div>
+	<div id='resultado'>Aqui se muestra el calculo del salario diario</div>
+	<script src='calcularSalario.js'></script>
+</body>
+</html>

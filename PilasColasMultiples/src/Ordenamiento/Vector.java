@@ -1,6 +1,6 @@
 package Ordenamiento;
 
-public class VectorX {
+public class Vector {
 
     // Atributos
     private int vector[];
@@ -10,7 +10,7 @@ public class VectorX {
     private int nPasadas;
 
     // Constructores
-    public VectorX(int t) {
+    public Vector(int t) {
         vector = new int[t];
         tamaño = t;
         reiniciarContadores();
@@ -19,7 +19,7 @@ public class VectorX {
         }
     }
 
-    public VectorX(int vec[]) {
+    public Vector(int vec[]) {
         tamaño = vec.length;
         reiniciarContadores();
         vector = vec.clone();
@@ -478,13 +478,70 @@ public class VectorX {
 
     public String toString() {
         String sal = "CONTENIDO DEL VECTOR\n";
+//        for (int i = 0; i < vector.length; i++) {
+//            sal += "Vector[" + i + "] = " + vector[i] + "\n";
+//        }
         sal += "\nNúmero de elementos     = " + tamaño;
         sal += "\nNúmero de pasadas       = " + nPasadas;
         sal += "\nNúmero de intercambios  = " + nIntercambios;
         sal += "\nNúmero de comparaciones = " + nComparaciones + "\n";
-        for (int i = 0; i < tamaño; i++) {
-            sal += "Vector[" + i + "] = " + vector[i] + "\n";
-        }
         return sal;
     }
+    
+    //Intercalar dos vectores
+    public void intercalarVector(Vector a, Vector b) {
+        reiniciarContadores();
+        a.ordenarBurbuja();
+        b.ordenarBurbuja();
+        int z = a.getVector().length + b.getVector().length;
+        int m = a.getVector().length;
+        int n = b.getVector().length;
+        int[] c = a.getVector();
+        int[] d = b.getVector();
+        int[] vec = new int[z];
+        int k = 0;
+        int j = 0;
+        int i = 0;
+        while (i < z && k < n && j < m) {
+            if (c[j] < d[k]) {
+                 vec[i++] = c[j++];  
+            } else {
+                vec[i++] = d[k++];
+            }
+            nComparaciones++;
+            nPasadas++;
+        }
+        if (i < z) {
+            if ((k < n)) {
+                while(k < n) {
+                    vec[i++] = d[k++];
+                }   
+            } else {
+                 while(j < m) {
+                     vec[i++] = c[j++];
+                 }
+            }
+        }
+        this.vector = vec;
+        this.tamaño = vec.length;
+    }
+    
+    public static int[][] dividirVector(int[] vector, int partes) {
+        if (partes <= 0 || vector.length % partes != 0) {
+            System.out.println("El número de partes debe dividir exactamente el tamaño del vector");
+        }
+
+        int elementosPorParte = vector.length / partes;
+        int[][] resultado = new int[partes][elementosPorParte];
+
+        int indice = 0;
+        for (int i = 0; i < partes; i++) {
+            for (int j = 0; j < elementosPorParte; j++) {
+                resultado[i][j] = vector[indice++];
+            }
+        }
+
+        return resultado;
+    }
+
 }
