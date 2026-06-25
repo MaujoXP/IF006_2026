@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Promedios</title>
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="css/formulario.css">
+	<link rel="stylesheet" href="css/tabla.css">
+</head>
+<body>
+	<div class="contenedor">
+		<h1>Sistema de promedios</h1>
+		<!--Pantalla del curso-->
+		<section id="pantallaCurso">
+			<h2>Datos del curso</h2>
+			<form id="formCurso">
+				<label for="nombreCurso">Nombre del curso</label>
+				<input type="text" id="nombreCurso" name="nombreCurso" required>
+
+				<label for="codigoCurso">Codigo del curso</label>
+				<input type="text" id="codigoCurso" name="codigoCurso" required>
+
+				<label for="profesor">Profesor</label>
+				<input type="text" id="profesor" name="profesor" required>
+
+				<button type="submit">Siguiente</button>
+			</form>
+		</section>
+
+		<!--Pantalla estudiantes-->
+		<section id="pantallaEstudiante" class="oculto">
+			<h2>Registro de estudiantes</h2>
+			<form id="formEstudiante">
+				<label for="nombreEstudiante">Nombre del estudiante</label>
+				<input type="text" id="nombreEstudiante" name="nombreEstudiante" required>
+
+				<label for="nota">Nota</label>
+				<input type="number" id="nota" name="nota" min="0" max="100" required>
+
+				<button type="submit">Agregar estudiante</button>
+			</form>
+			<table>
+				<thead>
+					<tr>
+					    <th>Estudiantes</th>
+					    <th>Nota</th>
+					    <th>Estado</th>
+					</tr>
+				</thead>
+				<tbody id="tablaEstudiantes">
+				</tbody>
+			</table>
+			<button id="btnCalcular">Calcular promedio</button>
+		</section>
+
+		<!--Pantalla resultados-->
+		<section id="pantallaResultado" class="oculto">
+			<h2>Resultados</h2>
+			<div class="tarjeta-resultado">
+				<p id="infoCurso"></p>
+				<p id="cantidadEstudiantes"></p>
+				<p id="promedioGeneral"></p>
+				<p id="notaMayor"></p>
+				<p id="notaMenor"></p>
+			</div>
+		</section>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+</html>

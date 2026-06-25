@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculadora de temperatura</title>
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+	<div id="contenedor">
+		<label>Temperatura:</label>
+		<input id="temperatura" type="number" placeholder="0">
+		<label for="unidadMedida">Escala de origen:</label>
+		<select name="unidadMedida" id="unidadOriginal">
+			<option value="fahrenheit">°F</option>
+			<option value="celcius">°C</option>
+			<option value="kelvin">K</option>
+		</select>
+		<label for="unidadMedida">Escala de destino:</label>
+		<select name="unidadMedida" id="unidadDestino">
+			<option value="fahrenheit">°F</option>
+			<option value="celcius">°C</option>
+			<option value="kelvin">K</option>
+		</select>
+		<button id="btnConvertir">Convertir</button>
+		<button id="btnLimpiar">Limpiar</button>
+		<div id="resultado">Resultado de conversión</div>
+	</div>
+	<script src="conversorTemp.js"></script>
+</body>
+</html>
